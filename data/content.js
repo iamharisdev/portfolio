@@ -135,7 +135,7 @@ const content = {
     {
       name: "No Yelling — Driving School Web App | Next.js",
       status: "live",
-      img: "/images/projects/netwync.png",
+      img: "/images/projects/noyelling.png",
       desc: "Web platform for an Australia-wide driving school, built for SEO and speed.Developed and enhanced a web application for a driving school platform serving users across Australia. I worked on UI/UX implementation, API integration and SEO optimization using Next.js and Node.js. The project focused on delivering a clean, user-friendly web experience while integrating backend functionality and improving the application's search visibility.",
       tags: ["Next.js", "Node.js", "SEO"],
       role: "Full stack developer — UI/UX implementation, SEO, and API integration.",
