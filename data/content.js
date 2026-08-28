@@ -19,7 +19,7 @@ const content = {
       "5+ years shipping production mobile & web apps — from pixel-accurate React Native UI to the Node.js APIs underneath. 9 apps live across the App Store and Play Store.",
     metaChips: [
       { label: "Lahore, Pakistan", led: true },
-      { label: "React Native · Expo · Ionic · React.js · Next.js · Node.js", led: true },
+      { label: "React Native · Expo · AI integrations · OpenAI · Anthropic · LLM APIs · Ionic · React.js · Next.js · Node.js", led: true },
       { label: "English · Urdu" },
     ],
   },

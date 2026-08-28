@@ -84,12 +84,19 @@ header.hero{
 @keyframes blink{50%{opacity:0;}}
 
 h1.title{
-  font-family:var(--mono);font-weight:700;
+  font-family:var(--mono);font-weight:800;
   font-size:clamp(30px,4.6vw,50px);
-  line-height:1.12;letter-spacing:-0.01em;
-  color:var(--text-primary);margin-bottom:14px;
+  line-height:1.08;letter-spacing:0;
+  color:var(--text-primary);margin-bottom:18px;
+  text-wrap:balance;
 }
-h1.title .accent{color:var(--teal);}
+h1.title .accent{
+  color:var(--teal);display:inline-block;position:relative;
+}
+h1.title .accent::after{
+  content:'';display:block;width:42%;height:3px;margin-top:10px;
+  background:var(--amber);box-shadow:8px 0 0 var(--teal);
+}
 .subtitle{
   font-size:17px;color:var(--text-secondary);max-width:520px;margin-bottom:28px;
 }
@@ -105,17 +112,18 @@ h1.title .accent{color:var(--teal);}
 .chip .led{width:6px;height:6px;border-radius:50%;background:var(--teal);}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;}
 .btn{
-  font-family:var(--mono);font-size:13px;font-weight:600;
-  padding:12px 20px;border-radius:8px;cursor:pointer;
+  font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:0.04em;
+  padding:12px 18px;border-radius:6px;cursor:pointer;
   display:inline-flex;align-items:center;gap:8px;
-  transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  transition:transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
   border:1px solid transparent;
 }
 .btn:hover{transform:translateY(-2px);}
-.btn-primary{background:var(--teal);color:#0B0F14;}
-.btn-primary:hover{background:#7ff2e0;}
-.btn-ghost{border-color:var(--border-bright);color:var(--text-primary);}
-.btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+.btn:focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
+.btn-primary{background:var(--teal);color:#0B0F14;box-shadow:4px 4px 0 var(--teal-dim);}
+.btn-primary:hover{background:#7ff2e0;box-shadow:6px 6px 0 var(--teal-dim);}
+.btn-ghost{border-color:var(--border-bright);color:var(--text-primary);background:rgba(26,34,46,0.45);}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal);background:rgba(94,234,212,0.06);box-shadow:4px 4px 0 rgba(46,95,88,0.55);}
 
 .terminal{
   background:var(--bg-surface);
