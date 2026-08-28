@@ -267,7 +267,7 @@ const content = {
   skillGroups: [
     {
       label: "core",
-      items: ["JavaScript / TypeScript", "React Native", "Expo", "React.js", "Next.js", "Ionic", "Node.js / Express"],
+      items: ["JavaScript / TypeScript", "React Native", "Expo","AI integrations", "OpenAI","anthropic","LLM apis", "React.js", "Next.js", "Ionic", "Node.js / Express"],
     },
     {
       label: "data",
