@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 // ---- small hook: fades an element in the first time it scrolls into view ----
@@ -121,8 +122,13 @@ function ProjectCard({ p }) {
   return (
     <div className="proj-card" onClick={() => setOpen((o) => !o)}>
       <div className="proj-thumb">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={p.img} alt={p.name} loading="lazy" />
+        <Image
+          src={p.img}
+          alt={p.name}
+          fill
+          sizes="(max-width: 760px) 100vw, 511px"
+          quality={75}
+        />
       </div>
       <div className="proj-body">
         <div className="proj-top">
@@ -240,8 +246,13 @@ export default function Portfolio({ content }) {
           </Reveal>
           <Reveal className="about-grid">
             <div className="about-photo">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={profile.photo} alt={profile.name} />
+              <Image
+                src={profile.photo}
+                alt={profile.name}
+                fill
+                sizes="(max-width: 700px) calc(100vw - 56px), 220px"
+                quality={80}
+              />
             </div>
             <div className="about-text">
               {about.paragraphs.map((p, i) => (
