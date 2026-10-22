@@ -9,14 +9,20 @@
 const content = {
   profile: {
     name: "Muhammad Haris",
-    role: "Senior React Native Developer",
+    role: "Senior Full Stack Developer",
     location: "Lahore, Pakistan",
     photo: "/images/my-pic.jpg",
-    resumeUrl:
-      "https://drive.google.com/file/d/1BXQaq-dnuWgO18GHlRQehDppoWrbQB8x/view?usp=sharing",
+    resumeUrl: "/Muhammad-Haris-Senior-Full-Stack-Developer-CV.pdf",
     availability: "AVAILABLE FOR FREELANCE",
     tagline:
       "5+ years shipping production mobile & web apps — from pixel-accurate React Native UI to the Node.js APIs underneath. 9 apps live across the App Store and Play Store.",
+    // Animated counters in the hero.
+    stats: [
+      { value: 5, suffix: "+", label: "Years experience" },
+      { value: 10, suffix: "+", label: "Production apps" },
+      { value: 9, suffix: "", label: "Apps on the stores" },
+      { value: 4, suffix: "", label: "Companies" },
+    ],
     metaChips: [
       { label: "Lahore, Pakistan", led: true },
       { label: "React Native · Expo · AI integrations · OpenAI · Anthropic · LLM APIs · Ionic · React.js · Next.js · Node.js", led: true },
@@ -26,7 +32,7 @@ const content = {
 
   // Lines typed out in the hero terminal window, in order.
   terminalLines: [
-    { cmd: "whoami", out: "Muhammad Haris — Senior React Native Developer" },
+    { cmd: "whoami", out: "Muhammad Haris — Senior Full Stack Developer" },
     { cmd: "cat status.txt", out: "5+ yrs experience · Lahore, PK · open to freelance" },
     { cmd: "ls stack/", out: "react-native expo ionic react.js  next.js  node.js  postgres  mongodb  firebase" },
     { cmd: "./deploy --list | wc -l", out: "9 apps shipped to App Store & Play Store" },
@@ -98,9 +104,28 @@ const content = {
   ],
 
   projects: [
+   
+    {
+      name: "Screen Mirror TV — Android TV App | Kotlin + WebRTC",
+      status: "live",
+      category: ["Mobile"],
+      img: "/images/projects/screenmirror.png",
+      desc: "Android TV app that shows a Mac or Windows screen on the TV, with nothing to install on the computer. The TV shows a web address and a 6-digit code. You open the site in any browser, type the code and pick a screen, and the picture and sound stream straight to the TV over WebRTC. Firebase is used only to pair the two devices. Also runs on Android phones and tablets.",
+      tags: ["Kotlin", "Android TV", "WebRTC", "Firebase", "OkHttp"],
+      role: "Sole developer. Built the Android TV app, the browser sender site, Firebase pairing and the Play Store release.",
+      features: [
+        "Code-based pairing: no app or account needed on the computer",
+        "Low-latency screen and audio streaming over WebRTC",
+        "Works from Chrome, Edge, Safari and Firefox on Mac and Windows",
+        "TURN relay set in Firebase so different networks connect, with no app update",
+        "Runs on Android TV, phones and tablets",
+      ],
+      links: [{ label: "screen-mirror-tv.web.app", url: "https://screen-mirror-tv.web.app" }],
+    },
     {
       name: "ProspectX — Real Estate Mobile App",
       status: "live",
+      category: ["Mobile"],
       img: "/images/projects/prospectX.png",
       desc: "Built a React Native mobile application for real estate wholesalers and investors. I worked on mobile development, API/backend integration and real-time communication features. The application included incoming and outgoing voice calls using Twilio and real-time chat using Socket.io. I also worked with Firebase and push notifications to support the app's communication and user experience across iOS and Android.",
       tags: ["React Native", "Node.js", "Twilio", "Socket.io", "Firebase"],
@@ -116,10 +141,30 @@ const content = {
         { label: "App Store", url: "https://apps.apple.com/us/app/prospectx/id1600834752" },
       ],
     },
-   
+     {
+      name: "Reelroom — AI Video Production Studio | Electron + Node.js",
+      status: "live",
+      category: ["Desktop", "AI"],
+      img: "/images/projects/reelroom.png",
+      desc: "Desktop studio for multi-channel YouTube production on Windows and macOS. Give it a YouTube URL and a timestamped transcript, and it builds a 1080p long video plus up to four vertical Shorts. OpenAI writes the script, titles and thumbnails, B-roll is picked from a local media library, and AI voice-over is added before the ffmpeg render. Jobs run through a durable SQLite queue with optional review steps, and finished videos can upload to YouTube automatically.",
+      tags: ["Electron", "Node.js", "Express", "SQLite", "ffmpeg", "OpenAI", "YouTube Data API"],
+      role: "Sole developer. Built the render pipeline, job queue, AI/TTS integrations, YouTube upload and Autopilot, and the cross-platform installers.",
+      features: [
+        "URL + transcript to one long video and 4 Shorts (yt-dlp download, ffmpeg render)",
+        "AI script, titles, thumbnails and celebrity detection with OpenAI",
+        "Voice-over with fallback across Inworld, Azure and ElevenLabs, plus a free local Kokoro voice",
+        "Auto transcripts from YouTube subtitles or faster-whisper",
+        "Resumable YouTube auto-upload with scheduled publishing and quota handling",
+        "Trend Intelligence and per-channel Autopilot that queues trending videos",
+        "Hardware encoding (NVENC / VideoToolbox) that falls back to CPU",
+        "Encrypted API-key vault (AES-256-GCM), roles, and DMG/EXE installers built with GitHub Actions",
+      ],
+      links: [],
+    },
     {
       name: "Awaaz-e-Sehat — AI-Powered Healthcare Platform",
       status: "live",
+      category: ["Web", "AI"],
       img: "/images/projects/awaazesehat.png",
       desc: "Worked on Awaaz-e-Sehat, an AI-powered healthcare platform focused on improving maternal healthcare access in Pakistan. The platform combines voice, WhatsApp and AI technologies to support patient engagement, clinical workflows and healthcare delivery. My contribution included software development and integration work across the product, helping deliver technology-driven healthcare solutions.",
       tags: ["Nextjs", "Nodejs", "Express.js", "Firebase"],
@@ -135,6 +180,7 @@ const content = {
     {
       name: "No Yelling — Driving School Web App | Next.js",
       status: "live",
+      category: ["Web"],
       img: "/images/projects/noyelling.png",
       desc: "Web platform for an Australia-wide driving school, built for SEO and speed.Developed and enhanced a web application for a driving school platform serving users across Australia. I worked on UI/UX implementation, API integration and SEO optimization using Next.js and Node.js. The project focused on delivering a clean, user-friendly web experience while integrating backend functionality and improving the application's search visibility.",
       tags: ["Next.js", "Node.js", "SEO"],
@@ -146,9 +192,11 @@ const content = {
       ],
       links: [{ label: "noyelling.com.au", url: "https://noyelling.com.au" }],
     },
+   
     {
       name: "Acadify",
       status: "live",
+      category: ["Mobile"],
       img: "/images/projects/acadify.png",
       desc: "Study-abroad platform, part of the Physics Wallah ecosystem.",
       tags: ["React Native", "Node.js", "Firebase"],
@@ -163,6 +211,7 @@ const content = {
     {
       name: "SafeSign — Workplace Safety App | React Native",
       status: "live",
+      category: ["Mobile"],
       img: "/images/projects/Desend.png",
       desc: "Workplace health & safety education app for CALD workers.Developed a React Native mobile application focused on workplace health and safety education for CALD workers. I worked on mobile development, UI/UX implementation and API integration, using Node.js and Firebase for backend functionality. The app was designed to provide an accessible and user-friendly mobile learning experience across iOS and Android.",
       tags: ["React Native", "Node.js", "Firebase"],
@@ -177,6 +226,7 @@ const content = {
     {
       name: "iSQROLL — Real-Time Marketplace App | React Native",
       status: "live",
+      category: ["Mobile"],
       img: "/images/projects/Isqroll.png",
       desc: "Developed a React Native mobile marketplace application for buying and selling products in New Zealand. I worked on mobile app development, UI/UX implementation and API integrations, including real-time communication features. The application used Twilio and Socket.io for messaging and communication, with Node.js and Firebase supporting the backend functionality. Built for a smooth cross-platform experience across iOS and Android.",
       tags: ["React Native", "Socket.io", "Twilio"],
@@ -191,6 +241,7 @@ const content = {
     {
       name: "Trova — Healthcare Scheduling App | Ionic capacitor",
       status: "live",
+      category: ["Mobile"],
       img: "/images/projects/trova.png",
       desc: "Developed a Ionic capacitor mobile application for healthcare professionals to manage schedules, virtual sessions, and clients. I worked on the mobile app development, UI implementation, API integration and Firebase functionality. The app was designed to help professionals manage their schedules and client interactions through a streamlined mobile experience across iOS and Android.",
       tags: ["React Native", "Node.js", "Firebase"],
@@ -205,6 +256,7 @@ const content = {
      {
       name: "Memee",
       status: "live",
+      category: ["Mobile"],
       img: "/images/projects/memee.png",
       desc: "Meme-creation platform with tournaments, anonymous judging, and an in-app coin economy.",
       tags: ["React Native", "Banuba SDK", "Imgly", "Prisma"],
@@ -223,6 +275,7 @@ const content = {
     {
       name: "SpotSwap — Smart Parking App | React Native",
       status: "live",
+      category: ["Mobile"],
       img: "/images/projects/spotswap.png",
       desc: "Smart-city parking marketplace — find and share parking spots nearby.",
       tags: ["React Native", "Google Maps API", "Firebase"],

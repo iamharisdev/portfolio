@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cv": "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --no-pdf-header-footer --print-to-pdf=public/Muhammad-Haris-Senior-Full-Stack-Developer-CV.pdf \"file://$PWD/cv/cv.html\""
   },
   "dependencies": {
     "next": "14.2.35",
