@@ -296,7 +296,7 @@ function ProjectCard({ p, onOpen }) {
       onMouseMove={trackPointer}
     >
       <div className="proj-thumb">
-        <Image src={p.img} alt="" fill sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 380px" quality={75} />
+        <Image src={p.img} alt={`${p.name} screenshot`} fill sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 380px" quality={75} />
         <span className="proj-cats">
           {p.category?.map((c) => (
             <span key={c}>{c}</span>
