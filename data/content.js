@@ -40,7 +40,7 @@ const content = {
 
   about: {
     paragraphs: [
-      "Senior Mobile App Developer with 5+ years of hands-on experience building, integrating, and deploying cross-platform iOS and Android applications, primarily with React Native. Experienced across the full mobile delivery lifecycle—from UI/UX implementation and API integration to production releases on Google Play and the Apple App Store. Strong background in TypeScript, JavaScript, Node.js, Firebase, real-time communication, payments, media/AR capabilities AI integrations, and third-party SDK integration. Has led 2 associate developers and contributed to 10+ production mobile applications.",
+      "Senior Full Stack Developer with 5+ years of hands-on experience building and shipping production mobile, web, desktop, and AI-powered applications. Primary strength in React Native for iOS and Android, backed by Next.js/React front ends and Node.js/Express APIs on PostgreSQL, MongoDB, and Firebase. Experienced across the full delivery lifecycle—from UI/UX implementation and API design to real-time communication, payments, media/AR, LLM integrations, and production releases on Google Play and the Apple App Store. Has led 2 associate developers and delivered 10+ production applications.",
       "Adept at architecting end-to-end solutions, from polished, responsive front-end interfaces to robust, secure back-end APIs, and integrating third-party services such as Twilio, Stripe, Firebase, and Agora. Recognized for engineering excellence and a consistent track record of delivering production-ready apps to global markets.",
     ],
     configRows: [
